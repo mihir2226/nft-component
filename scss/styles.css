@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+.attribution {
+  margin-top: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: hsl(217deg, 54%, 11%);
+  color: hsl(215deg, 51%, 70%);
+}
+
+.container {
+  width: 367px;
+  height: 598px;
+  background-color: hsl(217deg, 71%, 9%);
+  padding: 19px;
+  border-radius: 46px;
+  position: relative;
+}
+
+.card {
+  width: 330px;
+  height: 583px;
+  position: absolute;
+  background-color: hsl(216deg, 50%, 16%);
+  padding: 30px;
+  border-radius: 10px;
+  top: -25px;
+}
+.card-img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card-banner {
+  position: relative;
+}
+.card .overlay {
+  position: absolute;
+  inset: 0;
+  height: 99%;
+  width: 100%;
+  background-color: hsl(178deg, 100%, 50%);
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.card .overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card .overlay:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.card-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.card-description {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.card .priceAnddate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.card .priceAnddate img {
+  margin-right: 10px;
+}
+.card .price {
+  color: hsl(178deg, 100%, 50%);
+}
+.card .author {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid hsl(215deg, 51%, 70%);
+}
+.card .author img {
+  width: 5vh;
+  height: 5vh;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.card .author p {
+  margin-top: 20px;
+}
+.card span, .card-title {
+  color: hsl(0deg, 0%, 100%);
+}
+.card span:hover, .card-title:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.card span {
+  margin-left: 2px;
+}
+
+@media (max-width: 376px) {
+  .container {
+    background: none;
+    margin-top: 77px;
+  }
+  .card {
+    height: 560px;
+    padding: 22px;
+    border-radius: 20px;
+  }
+  .card-title {
+    margin-top: 20px;
+    margin-bottom: 13px;
+  }
+  .priceAnddate {
+    margin-bottom: 16px;
+  }
+}/*# sourceMappingURL=styles.css.map */

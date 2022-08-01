@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$veryDarkBlueMainBG: hsl(217, 54%, 11%);
+$veryDarkBlueCardBG: hsl(216, 50%, 16%);
+$veryDarkBlueLine: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+.attribution { margin-top: 20px; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: $veryDarkBlueMainBG;
+    color: $softBlue;
+}
+
+.container {
+    width: 367px;
+    height: 598px;
+    background-color: hsl(217deg 71% 9%);
+    padding: 19px;
+    border-radius: 46px;
+    position: relative;
+}
+
+.card {
+    width: 330px;
+    height: 583px;
+    position: absolute;
+    background-color: $veryDarkBlueCardBG;
+    padding: 30px;
+    border-radius: 10px;
+    top: -25px;
+
+   &-img{
+    width: 100%;
+    border-radius: 10px;
+   }
+
+   &-banner {
+    position: relative;
+   }
+
+   .overlay{
+    position: absolute;
+    inset: 0;
+    height: 99%;
+    width: 100%;
+    background-color: $cyan;
+    transition: 0.5s ease;
+    opacity: 0;
+   }
+
+   .overlay img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+
+   .overlay:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 10px;
+   }
+
+   &-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+   }
+
+   &-description {
+    margin-bottom: 20px;
+    line-height: 1.5;
+   }
+
+   .priceAnddate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+        margin-right: 10px;
+    }
+   }
+
+   .price {
+    color: $cyan;
+   }
+
+   .author {
+    img {
+        width: 5vh;
+        height: 5vh;
+        border: 1px solid $white;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    p{
+        margin-top: 20px;
+    }
+
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $softBlue;
+   }
+
+   span,
+   &-title{
+    color: $white;
+
+    &:hover {
+        color: $cyan;
+        cursor: pointer;
+    }
+   }
+
+   span{
+    margin-left: 2px;
+   }
+}
+
+$breakpoint-tablet: 376px;
+@media (max-width: $breakpoint-tablet) {
+    .container {
+        background: none;
+        margin-top: 77px;
+    }
+    .card {
+        height: 560px;
+        padding: 22px;
+        border-radius: 20px;
+    }
+    .card-title {
+        margin-top: 20px;
+        margin-bottom: 13px;
+       }
+    .priceAnddate {
+        margin-bottom: 16px;
+    }    
+}
+
+
+
+
